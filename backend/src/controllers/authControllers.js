@@ -1,4 +1,4 @@
-import User from "../../models/User.js";
+import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { upsertStreamUser } from "../lib/stream.js";
@@ -64,7 +64,9 @@ export const signup = async (req, res) => {
       secure: process.env.NODE_ENV === "production",
     });
 
-    res.status(201).json({ message: "User created successfully", newUser });
+    res
+      .status(201)
+      .json({ message: "User created successfully", user: newUser });
   } catch (error) {
     res.status(500).json({ message: "User failed to create", error });
     console.log(error);

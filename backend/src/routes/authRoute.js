@@ -5,7 +5,7 @@ import {
   onboard,
   signup,
 } from "../controllers/authControllers.js";
-import { protectRoute } from "../../middleware/authMiddleware.js";
+import { protectRoute } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
