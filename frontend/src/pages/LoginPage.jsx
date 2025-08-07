@@ -53,7 +53,6 @@ const LoginPage = () => {
               <span>{error.response.data.message}</span>
             </div>
           )}
-
           <div className="w-full">
             <form onSubmit={handleLogin}>
               <div className="space-y-4">
@@ -131,7 +130,7 @@ const LoginPage = () => {
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
               <img
-                src="/i.png"
+                src="../../public/Chat bot-bro.png"
                 alt="Language connection illustration"
                 className="w-full h-full"
               />
