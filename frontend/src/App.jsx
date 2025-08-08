@@ -8,12 +8,14 @@ import CallPage from "./pages/CallPage.jsx";
 import NotificationsPage from "./pages/NotificationsPage.jsx";
 import { Toaster } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { axiosInstance } from "./lib/axios.js";
 import PageLoader from "./components/PageLoader.jsx";
 import Layout from "./components/Layout.jsx";
+import useThemeStore from "./store/useThemeStore.js";
 
 export default function App() {
+  //zustand
+  const { theme } = useThemeStore();
   //axios
   //tanstack query explain
   const {
@@ -27,7 +29,6 @@ export default function App() {
       const res = await axiosInstance.get("/auth/me");
       return res.data;
     },
-
     retry: false,
   });
 
@@ -41,7 +42,7 @@ export default function App() {
   // console.log(authUser);
 
   return (
-    <div className="h-screen" data-theme="forest">
+    <div className="h-screen" data-theme={theme}>
       <Routes>
         <Route
           path="/"
