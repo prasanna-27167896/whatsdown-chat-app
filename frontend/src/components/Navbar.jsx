@@ -3,7 +3,12 @@ import React from "react";
 import { Link, useLocation } from "react-router";
 import { axiosInstance } from "../lib/axios";
 import toast from "react-hot-toast";
-import { BellIcon, LogOutIcon, ShipWheelIcon } from "lucide-react";
+import {
+  BellIcon,
+  BotMessageSquare,
+  LogOutIcon,
+  ShipWheelIcon,
+} from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 
 const Navbar = () => {
@@ -56,9 +61,9 @@ const Navbar = () => {
           {isChatPage && (
             <div className="pl-5">
               <Link to="/" className="flex items-center gap-2.5">
-                <ShipWheelIcon className="size-9 text-primary" />
+                <BotMessageSquare className="size-9 text-primary" />
                 <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary  tracking-wider">
-                  Streamify
+                  WhatsDown
                 </span>
               </Link>
             </div>
