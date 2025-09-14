@@ -11,12 +11,12 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 app.use(cors());
-// app.use(
-//   cors({
-//     origin: "https://whatsdown-chat-app.netlify.app/",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://whatsdown-chat-app-1.vercel.app/",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
