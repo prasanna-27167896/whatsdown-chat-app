@@ -10,12 +10,30 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
+const allowedOrigins = [
+  "https://whatsdown-chat-app.vercel.app",
+  "https://whatsdown-chat-app-1.vercel.app", // optional if you have staging
+];
+
 app.use(
   cors({
-    origin: "https://whatsdown-chat-app-1.vercel.app",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
+
+// app.use(
+//   cors({
+//     origin: "https://whatsdown-chat-app.vercel.app",
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
