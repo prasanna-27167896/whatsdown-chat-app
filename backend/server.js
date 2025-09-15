@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://whatsdown-chat-app.vercel.app",
+    origin: "https://whatsdown-chat-app-1.vercel.app",
     credentials: true,
   })
 );
