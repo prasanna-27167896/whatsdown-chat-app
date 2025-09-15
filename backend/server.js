@@ -10,7 +10,6 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-app.use(cors());
 app.use(
   cors({
     origin: "https://whatsdown-chat-app-1.vercel.app/",
