@@ -133,7 +133,7 @@ const LoginPage = () => {
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
               <img
-                src="../../public/Group Chat-bro.png"
+                src="https://i.postimg.cc/s2Gkh98m/Group-Chat-bro.png"
                 alt="Language connection illustration"
                 className="w-full h-full"
               />
