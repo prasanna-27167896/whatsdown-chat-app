@@ -112,10 +112,10 @@ export default function ChatPage() {
   if (loading || !chatClient || !channel) return <ChatLoader />;
 
   return (
-    <div className="h-[89vh]">
+    <div className="h-[89.7vh]">
       <Chat client={chatClient}>
         <Channel channel={channel}>
-          <div className="w-full relative">
+          <div className="w-full relative ">
             <CallButton handleVideoCall={handleVideoCall} />
             <Window>
               <ChannelHeader />

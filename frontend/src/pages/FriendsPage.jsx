@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router";
 import { axiosInstance } from "../lib/axios";
 import FriendCard from "../components/FriendCard";
+import NoFriendsFound from "../components/NoFriendsFound";
 
 export default function FriendsPage() {
   const queryClient = useQueryClient();
